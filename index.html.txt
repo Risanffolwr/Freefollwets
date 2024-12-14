@@ -1,0 +1,85 @@
+<p><!DOCTYPE html> <html lang=&quot;en&quot;> <head>  <meta charset=&quot;UTF-8&quot;>  <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>  <title>Instagram Followers Booster</title>  <style>  /* General Styling */  body {  font-family: Arial, sans-serif;  margin: 0;  padding: 0;  background: #f9f9f9;  display: flex;  justify-content: center;  align-items: center;  min-height: 100vh;  }</p>
+
+<p> .container {  max-width: 500px;  margin: 20px;  background: white;  padding: 30px;  border-radius: 15px;  text-align: center;  }</p>
+
+<p> .shadow-effect {  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  }</p>
+
+<p> h2 {  font-size: 1.8em;  margin-bottom: 20px;  }</p>
+
+<p> h2.bold-text {  font-weight: bold;  color: black;  }</p>
+
+<p> p {  font-size: 1.2em;  margin-bottom: 20px;  }</p>
+
+<p> input, button {  width: 100%;  padding: 15px;  margin: 15px 0;  border-radius: 10px;  border: 1px solid #ccc;  font-size: 1.2em;  }</p>
+
+<p> button {  background: #007bff;  color: white;  border: none;  cursor: pointer;  }</p>
+
+<p> button:hover {  background: #0056b3;  }</p>
+
+<p> .crimson-btn {  background: #DC143C; /* Crimson Background */  color: white;  }</p>
+
+<p> .crimson-btn:hover {  background: #B22222;  }</p>
+
+<p> /* Updated .username-display style */  .username-display {  background-color: #6a5acd; /* Purple-Blue background */  color: white;  font-weight: bold;  padding: 10px 20px; /* Adjusted padding for better spacing around the text */  border-radius: 10px;  margin-bottom: 20px;  font-size: 1.1em;  text-align: center; /* Optional, to center the text */  display: inline-block; /* Ensure it adjusts to the text width */  }</p>
+
+<p> /* Loader Styling */  .loader {  border: 4px solid #f3f3f3;  border-top: 4px solid #3498db;  border-radius: 50%;  width: 50px;  height: 50px;  animation: spin 2s linear infinite;  margin: 20px auto;  }</p>
+
+<p> @keyframes spin {  0% { transform: rotate(0deg); }  100% { transform: rotate(360deg); }  }</p>
+
+<p> #step3 p {  color: black;  font-weight: normal;  }</p>
+
+<p> /* Fourth Page Custom Styles */  #step4 {  background: #4e1ab5; /* Daisy Bush Background */  color: white;  padding: 30px;  border-radius: 15px;  text-align: center;  margin-top: 50px; /* Moved text lower */  }</p>
+
+<p> #step4 h2 {  font-size: 2.2em; /* Increased font size */  font-weight: bold;  margin-bottom: 30px;  color: white;  margin-top: 20px; /* Slightly pushed text lower */  }</p>
+
+<p> #step4 button {  background: #28a745; /* Green Background */  color: white;  font-size: 1.3em;  padding: 15px;  border: none;  border-radius: 10px;  cursor: pointer;  }</p>
+
+<p> #step4 button:hover {  background: #218838;  }</p>
+
+<p> .denim-btn {  background: #1560BD; /* Denim Background */  color: white;  font-weight: bold;  }</p>
+
+<p> .denim-btn:hover {  background: #0F4C81;  }</p>
+
+<p> /* Timer and other text styles */  #timer.styled-timer {  font-size: 1.5em;  font-weight: bold;  margin-bottom: 20px;  color: white;  background: black;  padding: 10px;  border-radius: 10px;  display: inline-block;  text-align: center;  width: 120px;  }</p>
+
+<p> /* 4th Page Text - Install App */  #step4 p {  font-size: 1.5em; /* Smaller font size */  font-weight: bold;  margin-bottom: 30px;  color: white;  }</p>
+
+<p> </style> </head> <body></p>
+
+<p> <!-- Step 1: Enter Instagram Username -->  <div class=&quot;container shadow-effect&quot; id=&quot;step1&quot;>  <div id=&quot;timer&quot; class=&quot;styled-timer&quot;>10:00</div>  <h2 class=&quot;bold-text&quot;>Please Enter Your IG Username</h2>  <p>Enter your Instagram username to proceed:</p>  <input type=&quot;text&quot; id=&quot;username&quot; placeholder=&quot;Enter your username&quot; />  <button onclick=&quot;fetchData()&quot;>Continue</button>  </div></p>
+
+<p> <!-- Step 1: Loading screen -->  <div class=&quot;container shadow-effect&quot; id=&quot;loadingStep1&quot; style=&quot;display: none;&quot;>  <p>Fetching Data From Instagram Server...</p>  <div class=&quot;loader&quot;></div>  </div></p>
+
+<p> <!-- Step 2: Fetching Data -->  <div class=&quot;container shadow-effect&quot; id=&quot;step2&quot; style=&quot;display: none;&quot;>  <div id=&quot;usernameDisplay&quot; class=&quot;username-display&quot;></div>  <h2 style=&quot;color: black; font-size: 1.5em; font-weight: bold;&quot;>Please Select Followers</h2>  <button onclick=&quot;selectFollowers(2000)&quot; class=&quot;denim-btn&quot;>2,000 Followers</button>  <button onclick=&quot;selectFollowers(3000)&quot; class=&quot;denim-btn&quot;>3,000 Followers</button>  <button onclick=&quot;selectFollowers(5000)&quot; class=&quot;denim-btn&quot;>5,000 Followers</button>  <button onclick=&quot;selectFollowers(10000)&quot; class=&quot;denim-btn&quot;>10,000 Followers</button> <!-- New option added -->  <button id=&quot;continueStep3&quot; style=&quot;display:none;&quot; class=&quot;crimson-btn&quot; onclick=&quot;goToStep3()&quot;>Continue</button>  </div></p>
+
+<p> <!-- Step 2: Loading screen -->  <div class=&quot;container shadow-effect&quot; id=&quot;loadingStep2&quot; style=&quot;display: none;&quot;>  <p>Please Wait...</p>  <div class=&quot;loader&quot;></div>  </div></p>
+
+<p> <!-- Step 3: Select Followers Confirmation -->  <div class=&quot;container shadow-effect&quot; id=&quot;step3&quot; style=&quot;display: none;&quot;>  <h2 style=&quot;color: red; font-size: 1.8em; font-weight: bold;&quot;>Last Step</h2>  <div class=&quot;username-display&quot; id=&quot;usernameDisplayStep3&quot;></div>  <p>You are almost done with synchronization of <span id=&quot;selectedFollowersCount&quot;></span> followers.</p>  <p>Please complete the last step by clicking on the verify button below to finish the synchronization process.</p>  <button onclick=&quot;goToStep4()&quot; class=&quot;denim-btn&quot;>Human Verification</button>  </div></p>
+
+<p> <!-- Step 4: Install App -->  <div class=&quot;container shadow-effect&quot; id=&quot;step4&quot; style=&quot;display: none;&quot;>  <h2>Install Winzo Signup &amp; Play Game Create Fresh Account</h2>  <a href=&quot;https://winzo.onelink.me/gu8K/4o4o7fxc&quot; target=&quot;_blank&quot;>  <button>Install App And Play 1 Game</button>  </a>  </div></p>
+
+<p> <script>  let selectedFollowers = 0;  let username = &quot;&quot;;</p>
+
+<p> function fetchData() {  username = document.getElementById('username').value;  if (username.trim() === '') {  alert('Please enter a username.');  return;  }  // Hide Step 1 and show loading animation  document.getElementById('step1').style.display = 'none';  document.getElementById('loadingStep1').style.display = 'block';</p>
+
+<p> // Simulate data fetching (this should be replaced with actual logic)  setTimeout(() => {  document.getElementById('loadingStep1').style.display = 'none';  document.getElementById('step2').style.display = 'block';</p>
+
+<p> document.getElementById('usernameDisplay').innerText = &#96;Hello, @${username}&#96;;  document.getElementById('usernameDisplayStep3').innerText = &#96;Hello @${username}&#96;;  }, 3000); // Simulating data fetching delay (3 seconds)  }</p>
+
+<p> function selectFollowers(amount) {  selectedFollowers = amount;  // Show the &quot;Continue&quot; button  document.getElementById('continueStep3').style.display = 'block';  }</p>
+
+<p> function goToStep3() {  // Hide Step 2 and show loading animation for Step 2  document.getElementById('step2').style.display = 'none';  document.getElementById('loadingStep2').style.display = 'block';</p>
+
+<p> // Simulate loading  setTimeout(() => {  document.getElementById('loadingStep2').style.display = 'none';  document.getElementById('selectedFollowersCount').innerText = selectedFollowers;  document.getElementById('step3').style.display = 'block';  }, 3000); // Simulate loading delay (3 seconds)  }</p>
+
+<p> function goToStep4() {  // Directly move to Step 4 without loading animation  document.getElementById('step3').style.display = 'none';  document.getElementById('step4').style.display = 'block';  }</p>
+
+<p> // Timer Functionality  function startTimer(duration, display) {  let timer = duration, minutes, seconds;  const interval = setInterval(() => {  minutes = parseInt(timer / 60, 10);  seconds = parseInt(timer % 60, 10);</p>
+
+<p> minutes = minutes < 10 ? &quot;0&quot; + minutes : minutes;  seconds = seconds < 10 ? &quot;0&quot; + seconds : seconds;</p>
+
+<p> display.textContent = &#96;${minutes}:${seconds}&#96;;</p>
+
+<p> if (--timer < 0) {  clearInterval(interval);  }  }, 1000);  }</p>
+
+<p> window.onload = function () {  const timeDisplay = document.querySelector('#timer');  startTimer(600, timeDisplay); // 10 minutes countdown  };  </script> </body> </html></p>
